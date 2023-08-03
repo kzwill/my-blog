@@ -60,6 +60,7 @@ export default defineConfig({
     }
   },
   lastUpdated: true,
+  base: '/my-blog/',
   themeConfig: {
     lastUpdatedText: '上次更新于',
     footer: {
