@@ -11,6 +11,7 @@ tag:
  - SOP
 top: 1
 sidebar: false
+publish: false
 ---
 
 # 快速上手

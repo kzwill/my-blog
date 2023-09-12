@@ -1,5 +1,6 @@
 ---
 description: 通过解析类 Markdown 的文本语法来实现图表的创建和动态修改。
+publish: false
 ---
 # Mermaid - 流程图
 
