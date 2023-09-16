@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .color {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .color-disk {
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 0deg,
+          hsl(0, 100%, 50%),
+          hsl(60, 100%, 50%),
+          hsl(120, 100%, 50%),
+          hsl(180, 100%, 50%),
+          hsl(240, 100%, 50%),
+          hsl(300, 100%, 50%),
+          hsl(0, 100%, 50%)
+        );
+      }
+      .box {
+        display: inline-flex;
+        width: 1000px;
+        height: 130px;
+        border: rgb(85, 85, 86) 1px solid;
+        padding: 5px;
+        flex-direction: row;
+        align-content: space-around;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        text-align: center;
+        font-size: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .red div {
+        background-color: red;
+      }
+      .green div {
+        background-color: green;
+      }
+      .blue div {
+        background-color: blue;
+      }
+      .box1 {
+        filter: hue-rotate(45deg);
+      }
+      .box2 {
+        filter: hue-rotate(90deg);
+      }
+      .box3 {
+        filter: hue-rotate(135deg);
+      }
+      .box4 {
+        filter: hue-rotate(180deg);
+      }
+      .box5 {
+        filter: hue-rotate(225deg);
+      }
+      .box6 {
+        filter: hue-rotate(270deg);
+      }
+      .box7 {
+        filter: hue-rotate(315deg);
+      }
+      .box8 {
+        filter: hue-rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="color">
+      <div class="color-disk"></div>
+      <div class="box red">
+        <div class="box8 child">基础色</div>
+        <div class="box1 child">45deg</div>
+        <div class="box2 child">90deg</div>
+        <div class="box3 child">135deg</div>
+        <div class="box4 child">180deg</div>
+        <div class="box5 child">225deg</div>
+        <div class="box6 child">270deg</div>
+        <div class="box7 child">315deg</div>
+      </div>
+      <div class="box green">
+        <div class="box8 child">基础色</div>
+        <div class="box1 child">45deg</div>
+        <div class="box2 child">90deg</div>
+        <div class="box3 child">135deg</div>
+        <div class="box4 child">180deg</div>
+        <div class="box5 child">225deg</div>
+        <div class="box6 child">270deg</div>
+        <div class="box7 child">315deg</div>
+      </div>
+      <div class="box blue">
+        <div class="box8 child">基础色</div>
+        <div class="box1 child">45deg</div>
+        <div class="box2 child">90deg</div>
+        <div class="box3 child">135deg</div>
+        <div class="box4 child">180deg</div>
+        <div class="box5 child">225deg</div>
+        <div class="box6 child">270deg</div>
+        <div class="box7 child">315deg</div>
+      </div>
+    </div>
+  </body>
+</html>
