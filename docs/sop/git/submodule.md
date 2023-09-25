@@ -1,6 +1,8 @@
 ---
 sticky: 202309121603
-description: git Submodule 的使用
+description: 🔄️ git Submodule 的使用
+title: 🔄️ git Submodule 的使用
+publish: true
 descriptionHTML: '
   <span style="color:var(--description-font-color);">快速了解 git Submodule 的使用</span>
   <pre style="background-color: #292b30; padding: 15px; border-radius: 10px;" class="shiki material-theme-palenight">
@@ -17,7 +19,7 @@ descriptionHTML: '
 '
 tag:
  - GIT
-top: 1
+top: 2
 sidebar: false
 ---
 # git ( Submodule )
