@@ -1,25 +1,24 @@
-import { getThemeConfig, defineConfig } from '@sugarat/theme/node'
+import { getThemeConfig, defineConfig } from "@sugarat/theme/node";
 
 // 主题独有配置
 // 详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
   // 文章默认作者
-  author: 'kangzw',
+  author: "可一昂",
   // 友链
   friend: [
     {
-      nickname: '康师傅',
-      des: '康师傅的github',
-      avatar:
-        'https://avatars.githubusercontent.com/u/41730382?v=4',
-      url: 'https://github.com/kzwill'
-    }
+      nickname: "可一昂",
+      des: "可一昂的github",
+      avatar: "https://avatars.githubusercontent.com/u/41730382?v=4",
+      url: "https://github.com/kzwill",
+    },
   ],
   recommend: {
-    showSelf: true
+    showSelf: true,
   },
   // 开启离线的全文搜索支持（如构建报错可注释下面的配置再次尝试）
-  search: 'pagefind',
+  search: "pagefind",
   // popover: {
   //   title: '公告',
   //   body: [
@@ -44,44 +43,42 @@ const blogTheme = getThemeConfig({
   //   ],
   //   duration: 0
   // }
-})
+});
 
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: blogTheme,
-  lang: 'zh-cn',
-  title: '@kzwill',
-  description: '康师傅的博客',
+  lang: "zh-cn",
+  title: "可一昂",
+  description: "康师傅的博客",
   vite: {
     optimizeDeps: {
-      include: ['element-plus'],
-      exclude: ['@sugarat/theme']
-    }
+      include: ["element-plus"],
+      exclude: ["@sugarat/theme"],
+    },
   },
   lastUpdated: true,
-  base: '/my-blog/',
+  base: "/my-blog/",
   themeConfig: {
-    lastUpdatedText: '上次更新于',
+    lastUpdatedText: "上次更新于",
     footer: {
-      message: '更多请访问github',
+      message: "更多请访问github",
       copyright:
-        'MIT Licensed | <a target="_blank" href="https://github.com/kzwill/my-blog"> @kzwill/my-blog</a>'
+        'MIT Licensed | <a target="_blank" href="https://github.com/kzwill/my-blog"> @kzwill/my-blog</a>',
     },
-    logo: '/logo.png',
+    logo: "/logo.png",
     // editLink: {
     //   pattern:
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
     //   text: '去 GitHub 上编辑内容'
     // },
-    nav: [
-      { text: '首页', link: '/' },
-    ],
+    nav: [{ text: "首页", link: "/" }],
     socialLinks: [
       {
-        icon: 'github',
-        link: 'https://github.com/kzwill'
-      }
-    ]
-  }
-})
+        icon: "github",
+        link: "https://github.com/kzwill",
+      },
+    ],
+  },
+});
