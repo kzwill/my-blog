@@ -153,5 +153,5 @@ hotfix 主要流程如下：
 ## 4. 官方的流程图
 
 <div style="width: 750px;height: 800px;border: 1px #333 solid">
-    <img src="/my-blog/imgs/git/gitflow.awebp" style="max-height: 100%"/>
+    <img src="https://jeffkreeftmeijer.com/git-flow/git-flow.png" style="max-height: 100%"/>
 </div>
