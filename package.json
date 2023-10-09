@@ -1,5 +1,4 @@
 {
-  "author": "kzwill",
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
     "@sugarat/theme": "^0.1.38",
@@ -11,13 +10,6 @@
     "typescript": "^5.1.6",
     "vitepress": "1.0.0-beta.7"
   },
-  "license": "MIT",
-  "name": "vitepress-blog",
-  "private": true,
-  "scripts": {
-    "build": "vitepress build docs",
-    "dev": "vitepress dev docs",
-    "serve": "vitepress serve docs"
-  },
-  "version": "1.0.0"
+  "author": "kzwill",
+  "license": "MIT"
 }
