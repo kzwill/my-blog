@@ -12,7 +12,7 @@ descriptionHTML: '
         <span style="color:#A6ACCD;"></span>
         <span style="color:#C3E88D;">checkout</span>
         <span style="color:#A6ACCD;"></span>
-        <span style="color:#00a6ed;">-b feature/userManager</span>
+        <span style="color:#00a6ed;">-b feature/userManage</span>
       </span><br/>
       <span class="line" style="margin-left: 8px">
         <span style="color:#FFCB6B;">git</span>
@@ -62,7 +62,7 @@ gitflow 是 git 的一种工作流程规范,由 Vincent Driessen 最先提出来
 
 master 分支的代码要设置提交权限，尽量不要将 master 的提交权限扩散。
 
-```sh
+```shell
 (master)$: git merge release --no-ff          # 把release测试好的代码合并到master，运维人员操作
 (master)$: git tag -a v0.1 -m '部署包版本名'    # 给版本命名，打Tag
 ```
@@ -75,17 +75,17 @@ master 分支的代码要设置提交权限，尽量不要将 master 的提交�
 
 **第一**：进行需求开发，结束之后，将 feature 分支的代码合并过来
 
-```sh
-(develop)$: git checkout -b feature/userManager           # 从develop建立特性分支
-(feature/userManager)$: coding...                         # 开发
-(feature/userManager)$: git add xxx
-(feature/userManager)$: git commit -m 'feat: 增加了用户管理功能'
-(develop)$: git merge feature/userManager --no-ff         # 把特性分支合并到develop
+```shell
+(develop)$: git checkout -b feature/userManage           # 从develop建立特性分支
+(feature/userManage)$: coding...                         # 开发
+(feature/userManage)$: git add xxx
+(feature/userManage)$: git commit -m 'feat: 增加了用户管理功能'
+(develop)$: git merge feature/userManage --no-ff         # 把特性分支合并到develop
 ```
 
 **第二**：将 hotfix 处理好的 bug 合并过来
 
-```sh
+```shell
 (develop)$: git merge hotfix/v0.1.1 --no-ff              # 把hotfix分支合并到develop，同步代码
 ```
 
@@ -94,12 +94,12 @@ master 分支的代码要设置提交权限，尽量不要将 master 的提交�
 - 开发新功能时，以 develop 为基础创建 feature 分支
 - 分支命名: feature/ 开头的为特性分支， 命名规则: feature/user_module、 feature/cart_module
 
-```sh
-(develop)$: git checkout -b feature/userManager           # 从develop建立特性分支
-(feature/userManager)$: coding...                         # 开发
-(feature/userManager)$: git add xxx
-(feature/userManager)$: git commit -m 'feat: 增加了用户管理功能'
-(develop)$: git merge feature/userManager --no-ff         # 把特性分支合并到develop
+```shell
+(develop)$: git checkout -b feature/userManage           # 从develop建立特性分支
+(feature/userManage)$: coding...                         # 开发
+(feature/userManage)$: git add xxx
+(feature/userManage)$: git commit -m 'feat: 增加了用户管理功能'
+(develop)$: git merge feature/userManage --no-ff         # 把特性分支合并到develop
 ```
 
 - ### Release 分支
@@ -112,7 +112,7 @@ master 分支的代码要设置提交权限，尽量不要将 master 的提交�
 2.  如果测试过程中若存在 bug 需要修复，则直接由**开发者在 release 分支修复并提交**。
 3.  当测试完成之后，合并 release 分支到 master 和 develop 分支，此时 master 为最新代码，用作上线。
 
-```sh
+```shell
 (develop)$: git checkout -b release/v0.1.0              # 把hotfix分支合并到develop，同步代码
 (master)$:  git merge release/v0.1.0 --no-ff			# 将release的代码合并到master分支
 (master)$: git tag -a v0.1 -m '部署包版本名'				# 打一个新的tag
@@ -135,7 +135,7 @@ hotfix 主要流程如下：
 >
 > 例如: 当前的 release 分支为 v0.2，则 hotfix 分支名为 v0.2.1，下个 hotfix 分支名为 v0.2.2。
 
-```sh
+```shell
 (master)$: git checkout -b hotfix/v0.1.1              # 从master建立hotfix分支
 (hotfix/v0.1.1)$: bcoding...                          # 开发
 (hotfix/v0.1.1)$: git add xxx
@@ -148,10 +148,10 @@ hotfix 主要流程如下：
 
 ## 3. git flow 工作流程图
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="width:750px; height:500px;" src="https://www.processon.com/embed/6520118cca74b14bc107227b"></iframe>
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="width:800px; height:500px;" src="https://www.processon.com/embed/6520118cca74b14bc107227b"></iframe>
 
 ## 4. 官方的流程图
 
-<div style="width: 750px;height: 800px;border: 1px #333 solid">
+<div style="width: 800px;height: 800px;border: 1px #333 solid">
     <img src="https://jeffkreeftmeijer.com/git-flow/git-flow.png" style="max-height: 100%"/>
 </div>
