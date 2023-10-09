@@ -15,7 +15,7 @@ dependencies:
     specifier: ^2.3.8
     version: registry.npmmirror.com/element-plus@2.3.8(vue@3.3.4)
   vue:
-    specifier: ^3.3.4
+    specifier: 3.3.4
     version: registry.npmmirror.com/vue@3.3.4
 
 devDependencies:
