@@ -13,7 +13,7 @@ export default defineConfig({
   base: "/my-blog/",
   themeConfig: {
     lastUpdatedText: "上次更新于",
-    logo: "/logo.png",
+    logo: "/my-blog/logo.png",
     // editLink: {
     //   pattern:
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
