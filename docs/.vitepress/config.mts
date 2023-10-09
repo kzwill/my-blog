@@ -10,6 +10,7 @@ export default defineConfig({
   title: "可一昂",
   description: "康师傅的博客",
   lastUpdated: true,
+  base: "/my-blog/",
   themeConfig: {
     lastUpdatedText: "上次更新于",
     logo: "/logo.png",
