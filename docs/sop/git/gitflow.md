@@ -65,6 +65,7 @@ master 分支的代码要设置提交权限，尽量不要将 master 的提交�
 ```shell
 (master)$: git merge release --no-ff          # 把release测试好的代码合并到master，运维人员操作
 (master)$: git tag -a v0.1 -m '部署包版本名'    # 给版本命名，打Tag
+(master)$: git push origin v0.1       		  # 将tag推送到远程
 ```
 
 - ### Develop 分支
@@ -155,3 +156,62 @@ hotfix 主要流程如下：
 <div style="width: 800px;height: 800px;border: 1px #333 solid">
     <img src="https://jeffkreeftmeijer.com/git-flow/git-flow.png" style="max-height: 100%"/>
 </div>
+
+## 5. git 常用命令
+
+```shell
+// 初始化仓库
+git init
+// 克隆（复制）一个远程仓库到本地
+git clone <repository-url>
+// 将文件提交到暂存区
+git add <file>
+// 提交更改到版本历史
+git commit -m "fix: 提交消息"
+// 查看文件状态
+git status
+// 查看提交历史
+git log
+
+// 切换分支
+git checkout feature/userManage
+// 创建一个分支
+git branch feature/logManage
+// 创建一个分支并切换到当前分支
+git checkout -b feature/roleManage
+
+// 拉取代码
+git pull
+// 拉取另一个分支的代码到当前分支
+git pull origin develop
+
+// 合并分支到当前分支
+git merge <branch-name>
+
+// 推送代码到远程
+git push
+// 推送代码到另一个仓库
+git push remote_name dev
+```
+
+**关于 git 合并时 快进（fast-forward）合并和非快进合并的区别：**
+
+#### `git merge feat`：
+
+- 这是标准的分支合并操作，它会将 "feat" 分支的更改合并到当前分支。
+- 如果没有冲突，合并将是一个快进（fast-forward）合并，这意味着不会创建新的合并提交，只是将当前分支的指针移动到 "feat" 分支的最新提交。
+- 这种方式将使得分支历史线性，并且不会保留关于合并的具体信息。
+
+#### `git merge feat --no-ff`：
+
+- 这是使用 "--no-ff" 标志进行分支合并的方式。它用于确保即使没有冲突，也会创建一个新的合并提交，而不是执行快进合并。
+- 这种合并策略会保留关于分支合并的具体信息，包括合并的源分支和合并时间戳。
+- 使用 "--no-ff" 可以更清晰地显示分支合并的历史，特别是在多人协作或复杂项目中。
+
+> 总的来说，区别在于合并历史的形状和信息的保留。使用 "--no-ff" 合并策略会创建更有信息量的合并提交，而标准的 `git merge` 可能会导致更线性的历史。你可以根据项目的需求和合并历史的可读性来选择合适的策略。
+
+<div style="width: 800px;height: 400px;border: 1px #333 solid">
+    <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xNjA3NTQ1OS0zNGRhMjkxYzE0NWU3MDc3LnBuZz9pbWFnZU1vZ3IyL2F1dG8tb3JpZW50L3N0cmlwfGltYWdlVmlldzIvMi93LzEyMDAvZm9ybWF0L3dlYnA?x-oss-process=image/format,png" style="max-height: 100%"/>
+</div>
+
+<iframe id="embed_dom" name="embed_dom" frameborder="0" style="width:800px; height:800px;" src="https://www.processon.com/embed/6526936b7fde9c4bb35fe559"></iframe>
